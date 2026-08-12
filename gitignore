@@ -1,0 +1,38 @@
+# Байт-код, оптимизированные и DLL-файлы
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальные окружения
+.venv/
+venv/
+ENV/
+env/
+
+# Сборка и упаковка
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Тесты и покрытие
+.pytest_cache
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+
+# Кэш линтеров
+.mypy_cache
+.pyre
+.ruff_cache
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Настройки IDE
+.vscode/
+.idea/
