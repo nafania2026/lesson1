@@ -57,6 +57,17 @@
 01_lesson
 02_lesson
 03_lesson
+В папке 03_lesson добавлены следующие файлы с отработанным домашним заданием:
+  Тема: "Создание класса"
+  файл user.py - конструктор first_name , last_name
+  файл lesson_3_task_1.py - импорт класса User  и создание нового экземпляра my_user
+  Тема: "Список объектов"
+  файл smartphone.py - конструктор smartphone 
+  файл lesson_3_task_2.py - импорт класса smartphone  и создание переменной catalog , добавлено 5 экземпляров Smartphone
+  Тема: "Вложенные классы"
+  файл address - конструктор Address с 5 переменными
+  файл mailing - конструктор Mailing  с 4 переменными
+  файл lesson_3_task_3.py - импорт класса Address и Mailing, создание экземпляра Mailing.
 
 
 
