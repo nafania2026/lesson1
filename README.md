@@ -69,6 +69,14 @@
   файл mailing - конструктор Mailing  с 4 переменными
   файл lesson_3_task_3.py - импорт класса Address и Mailing, создание экземпляра Mailing.
 
+  # 04_lesson
+  В папке 04_lesson добавлены следующие файлы:
+  string_utils.py в него были внесены коррективы- добавлен import re, также изменения касаются функции self,
+  которая была заменена на @staticmethod, также были добавлены 2 дополнительных метода по class StringUtils.
+  Вся информация добавлена в файле defects.txt
+    В файле test_string_utils.py были протестированы функции указанные в файле  string_utils.py
+  
+
 
 
 
