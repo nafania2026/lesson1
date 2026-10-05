@@ -1,0 +1,85 @@
+import re
+
+class StringUtils:
+    """Класс с полезными утилитами для обработки и анализа строк"""
+
+    @staticmethod 
+    def capitalize( string: str) -> str:
+        """
+        Принимает на вход текст, делает первую букву заглавной
+        и возвращает этот же текст
+        Пример: `capitilize("skypro") -> "Skypro"`
+        """
+        return string.capitalize()
+    
+    @staticmethod
+    def trim( string: str) -> str:
+        """
+        Принимает на вход текст и удаляет пробелы в начале, если они есть
+        Пример: `trim("   skypro") -> "skypro"`
+        """
+        whitespace = " "
+        while string.startswith(whitespace):
+            string = string.removeprefix(whitespace)
+        return string
+    
+    @staticmethod
+    def contains( string: str, symbol: str) -> bool:
+        """
+        Возвращает `True`, если строка содержит искомый символ
+        и `False` - если нет
+        Параметры:
+            `string` - строка для обработки
+            `symbol` - искомый символ
+        Пример 1: `contains("SkyPro", "S") -> True`
+        Пример 2: `contains("SkyPro", "U") -> False`
+        """
+        res = False
+        try:
+            res = string.index(symbol) > -1
+        except ValueError:
+            pass
+
+        return res
+    
+    @staticmethod
+    def delete_symbol( string: str, symbol: str) -> str:
+        """
+        Удаляет все подстроки из переданной строки
+        Параметры:
+            `string` - строка для обработки
+            `symbol` - искомый символ для удаления
+        Пример 1: `delete_symbol("SkyPro", "k") -> "SyPro"`
+        Пример 2: `delete_symbol("SkyPro", "Pro") -> "Sky"`
+        """
+        if StringUtils.contains(string, symbol):
+            string = string.replace(symbol, "")
+        return string
+
+    @staticmethod 
+    def format( string: str) -> str:
+            """
+            Принимает на вход текст, делает первую букву заглавной
+            и возвращает этот же текст
+            Пример: `format("Test") -> "Test"`
+            """
+            return string.format()
+
+    @staticmethod 
+    def isnumeric_positive_digits( string: str) -> bool:
+                """
+                Принимает на вход числа,  и возвращает эти же числа'
+                Пример: `isnumeric("12345") -> "12345"`
+                """
+                return string.isnumeric()
+
+    @staticmethod 
+    def isnumeric_positive_digits(value: str )-> bool: #None всегда False     
+        if not isinstance(value,str): 
+            return False
+        # Регулярное выражение гарантирует наличие хотя бы одной буквы, цыфры, строка должна состоять из букв, цифр и пробелов
+        pattern = r"^(?=.*[a-zA-Za-яА-ЯёЁ])(?=.*\d)[a-zA-Za-яА-ЯёЁ\d\s]+$"
+        return bool(re.match(pattern,value))
+                    
+        
+    

@@ -1,0 +1,34 @@
+Исправления в файле string_utils.py
+Добавлен import re
+Добавлен  @staticmethod в строки номер (4,13,24,43)
+Удалён self из строк номер (5,14,25,44)
+Добавлены изменения  в функцию def delete_symbol(), в части 
+if StringUtils.contains(string, symbol)
+Добавлены методы:
+@staticmethod 
+    def format( string: str) -> str:
+            """
+            Принимает на вход текст, делает первую букву заглавной
+            и возвращает этот же текст
+            Пример: `format("Test") -> "Test"`
+            """
+            return string.format()
+
+    @staticmethod 
+    def isnumeric_positive_digits( string: str) -> bool:
+                """
+                Принимает на вход числа,  и возвращает эти же числа'
+                Пример: `isnumeric("12345") -> "12345"`
+                """
+                return string.isnumeric()
+
+    @staticmethod 
+    def isnumeric_positive_digits(value: str )-> bool: #None всегда False     
+        if not isinstance(value,str): 
+            return False
+        # Регулярное выражение гарантирует наличие хотя бы одной буквы, цыфры, строка должна состоять из букв, цифр и пробелов
+        pattern = r"^(?=.*[a-zA-Za-яА-ЯёЁ])(?=.*\d)[a-zA-Za-яА-ЯёЁ\d\s]+$"
+        return bool(re.match(pattern,value))
+                    
+        
+    
